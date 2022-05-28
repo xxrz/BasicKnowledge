@@ -1,3 +1,9 @@
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Vector;
+import java.util.concurrent.*;
+
 public class test {
 
     /**
@@ -20,7 +26,13 @@ public class test {
     public static void main(String[] args) {
         byte[] data1 ={0x1,0x1,0x1,0x1};
         String x = bytesToHex(data1);
+        x.hashCode();
+
         System.out.println(x);
+        Hashtable<Integer,Integer> map = new ConcurrentHashMap<>();
+
+
+
     }
 
 //    std::string intToHexString(int i) {
