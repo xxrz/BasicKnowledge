@@ -29,7 +29,7 @@ public class test {
         x.hashCode();
 
         System.out.println(x);
-        Hashtable<Integer,Integer> map = new ConcurrentHashMap<>();
+//        Hashtable<Integer,Integer> map = new ConcurrentHashMap<>();
 
 
 
