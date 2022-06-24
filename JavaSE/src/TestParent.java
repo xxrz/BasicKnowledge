@@ -1,4 +1,4 @@
-public class Parent {
+public class TestParent {
     @Override
     public String toString(){
         return "p";
@@ -6,7 +6,7 @@ public class Parent {
 
 
 
-    static class Child extends Parent {
+    static class Child extends TestParent {
         @Override
         public String toString(){
             return "c";
