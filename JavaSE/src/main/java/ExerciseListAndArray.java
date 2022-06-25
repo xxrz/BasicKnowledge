@@ -11,7 +11,7 @@ public class ExerciseListAndArray {
     //我把list和arr一直搞反了
     //list是列表：ArrayList,LinkedList
     //arr是数组：int[]
-    public static void testArrayToList(){
+    public void testArrayToList(){
 
 
         //方法一：
@@ -54,7 +54,7 @@ public class ExerciseListAndArray {
     }
 
     public static void main(String[] args) {
-        testArrayToList();
+//        testArrayToList();
         testListToArray();
 
     }

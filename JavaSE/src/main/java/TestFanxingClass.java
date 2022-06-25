@@ -2,7 +2,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-public class TestFanxing {
+public class TestFanxingClass {
+    //测试泛型擦除+反射
     public static void main(String[] args) throws NoSuchFieldException, SecurityException, NoSuchMethodException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, InvocationTargetException {
 
         // 新建一个int集合，添加元素
