@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class ArrayACM {
     public static int[] stringToIntegerArray(String input) {
         input = input.trim();
-        input = input.substring(1, input.length() - 1);
+//        input = input.substring(1, input.length() - 1);
         if (input.length() == 0) {
             return new int[0];
         }
@@ -39,6 +39,7 @@ public class ArrayACM {
     }
 
     public static void main(String[] args) throws IOException {
+        //字符流
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String line;
         while ((line = in.readLine()) != null) {
