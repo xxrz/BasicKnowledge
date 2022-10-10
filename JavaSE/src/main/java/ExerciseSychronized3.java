@@ -3,6 +3,7 @@ public class ExerciseSychronized3 {
 
     public static void main(String[] args) {
         final ExerciseSychronized3 exerciseSychronized3 = new ExerciseSychronized3();
+
         new Thread(new Runnable() {
             @Override
             public void run() {

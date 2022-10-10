@@ -21,6 +21,39 @@ public class ExerciseThrealPool {
         executorService.shutdown();
     }
 
+    public static void testThreadPoolExecute(){
+        //Java.util.concurrent.ThreadPoolExecutor类是ExecutorSerivce接口的具体实现
+        //除非你需要显示的给ThreadPoolExecutor指定这些参数，通常使用java.util.concurrent.Executor类中的工厂方法来创建实例
+        int  corePoolSize  =    5;
+        int  maxPoolSize   =   10;
+        long keepAliveTime = 5000;
+
+        ExecutorService threadPoolExecutor =
+                new ThreadPoolExecutor(
+                        corePoolSize,
+                        maxPoolSize,
+                        keepAliveTime,
+                        TimeUnit.MILLISECONDS,
+                        new LinkedBlockingQueue<Runnable>()
+                );
+
+
+        for (int i = 0; i < 10; i++) {
+            final int idx = i;
+            threadPoolExecutor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println(Thread.currentThread().getName()+","+ idx);
+                }
+            });
+        }
+
+        threadPoolExecutor.shutdown();
+
+
+    }
+
+
     public static void testFixed(){
         int num = Runtime.getRuntime().availableProcessors();
         System.out.println(num);
@@ -75,8 +108,9 @@ public class ExerciseThrealPool {
 
     public static void main(String[] args) {
 //        testCache();
-        testFixed();
+//        testFixed();
 //        testScheduled();
 //        testSingle();
+        testThreadPoolExecute();
     }
 }
